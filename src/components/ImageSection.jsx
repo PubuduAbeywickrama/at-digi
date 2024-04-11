@@ -8,14 +8,8 @@ const ImageSection = () => {
     const handleResize = () => {
       setIsBelow768(window.innerWidth <= 768);
     };
-
-    // Add event listener for window resize
     window.addEventListener('resize', handleResize);
-
-    // Initial check
     handleResize();
-
-    // Remove event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
